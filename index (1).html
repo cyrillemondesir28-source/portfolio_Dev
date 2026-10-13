@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cyrille Mondésir — Développeur Web & Logiciel</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070914;--bg2:#0e1224;--card:rgba(255,255,255,.05);--bd:rgba(255,255,255,.12);--tx:#eef1ff;--mu:#9aa3c7;--a:#7c5cff;--b:#00e0ff;--c:#ff4ecd;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f5f6ff;--bg2:#e9ebff;--card:rgba(255,255,255,.75);--bd:rgba(40,40,100,.15);--tx:#14163a;--mu:#555b82}}
+:root[data-theme="light"]{--bg:#f5f6ff;--bg2:#e9ebff;--card:rgba(255,255,255,.75);--bd:rgba(40,40,100,.15);--tx:#14163a;--mu:#555b82}
+:root[data-theme="dark"]{--bg:#070914;--bg2:#0e1224;--card:rgba(255,255,255,.05);--bd:rgba(255,255,255,.12);--tx:#eef1ff;--mu:#9aa3c7}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:'Space Grotesk',system-ui,sans-serif;overflow-x:hidden;line-height:1.6}
+.blob{position:fixed;width:46vmax;height:46vmax;border-radius:50%;filter:blur(90px);opacity:.35;z-index:0;animation:fl 18s ease-in-out infinite alternate;pointer-events:none}
+.b1{background:var(--a);top:-15vmax;left:-10vmax}.b2{background:var(--b);bottom:-18vmax;right:-12vmax;animation-delay:-6s}.b3{background:var(--c);top:40%;left:50%;width:28vmax;height:28vmax;opacity:.18;animation-delay:-3s}
+@keyframes fl{to{transform:translate(8vmax,6vmax) scale(1.15)}}
+main,nav,footer{position:relative;z-index:1}
+nav{position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px 5vw;z-index:10}
+nav::before{content:"";position:absolute;inset:0;z-index:-1;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 70%,transparent);border-bottom:1px solid var(--bd)}
+.logo{font-weight:700;font-size:1.2rem;background:linear-gradient(90deg,var(--b),var(--c));-webkit-background-clip:text;background-clip:text;color:transparent}
+nav .l{display:flex;gap:22px;align-items:center;margin-left:auto}
+.r{display:flex;gap:10px;align-items:center}
+.bg,.cl{display:none;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--card);border:1px solid var(--bd);color:var(--tx);font-size:1.2rem;cursor:pointer}
+nav a{color:var(--mu);text-decoration:none;font-size:.9rem;white-space:nowrap}nav a:hover{color:var(--tx)}
+#th{background:var(--card);border:1px solid var(--bd);color:var(--tx);border-radius:99px;padding:6px 12px;cursor:pointer}
+section{padding:90px 5vw 40px;max-width:1150px;margin:auto}
+.hero{min-height:88vh;display:grid;grid-template-columns:1.3fr .8fr;gap:40px;align-items:center}
+.tag{display:inline-block;padding:6px 14px;border:1px solid var(--bd);border-radius:99px;background:var(--card);font-size:.85rem;color:var(--b)}
+h1{font-size:clamp(2.4rem,7vw,5rem);line-height:1.05;margin:18px 0}
+.g{background:linear-gradient(90deg,var(--a),var(--b),var(--c),var(--a));background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sh 6s linear infinite}
+@keyframes sh{to{background-position:300% 0}}
+.type{font-size:clamp(1.1rem,2.6vw,1.6rem);color:var(--mu);min-height:2em}
+.type b{color:var(--tx)}.cur{display:inline-block;width:2px;height:1em;background:var(--b);margin-left:3px;animation:bl 1s steps(1) infinite;vertical-align:-2px}
+@keyframes bl{50%{opacity:0}}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.btn{padding:13px 24px;border-radius:14px;text-decoration:none;font-weight:700;color:#fff;background:linear-gradient(120deg,var(--a),var(--c));box-shadow:0 10px 30px -8px var(--a);transition:.3s}
+.btn:hover{transform:translateY(-3px) scale(1.03)}
+.btn.o{background:var(--card);border:1px solid var(--bd);color:var(--tx);box-shadow:none}
+.avatar{position:relative;width:min(320px,70vw);aspect-ratio:1;margin:auto;display:grid;place-items:center;font-size:5.5rem;font-weight:700;border-radius:50%;background:conic-gradient(from 0deg,var(--a),var(--b),var(--c),var(--a));animation:sp 10s linear infinite}
+.avatar span{display:grid;place-items:center;width:92%;height:92%;border-radius:50%;background:var(--bg2);animation:sp 10s linear infinite reverse}
+@keyframes sp{to{transform:rotate(360deg)}}
+.avatar img{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block}
+.avatar span{overflow:hidden}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin-top:20px}
+.st,.card,.tl div{background:var(--card);border:1px solid var(--bd);border-radius:20px;backdrop-filter:blur(10px)}
+.st{padding:20px;text-align:center}.st b{display:block;font-size:2.2rem;background:linear-gradient(90deg,var(--b),var(--c));-webkit-background-clip:text;background-clip:text;color:transparent}.st small{color:var(--mu)}
+h2{font-size:clamp(1.8rem,4vw,2.8rem);margin:0 0 28px}h2 em{font-style:normal;color:var(--b)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:20px}
+.card{padding:26px;transition:transform .25s,border-color .25s,box-shadow .25s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-8px);border-color:var(--a);box-shadow:0 20px 50px -20px var(--a)}
+.card::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,var(--a),var(--b),var(--c))}
+.ic{font-size:2.2rem}.card h3{margin:10px 0 6px;font-size:1.3rem}.card p{color:var(--mu);margin:0 0 14px;font-size:.95rem}
+.lk{display:inline-block;margin-top:16px;padding:9px 18px;border-radius:12px;font-size:.88rem;font-weight:700;text-decoration:none;color:#fff;background:linear-gradient(120deg,var(--a),var(--c));transition:.3s}.lk:hover{transform:translateY(-2px) scale(1.04);box-shadow:0 8px 24px -8px var(--a)}
+.chips{display:flex;flex-wrap:wrap;gap:7px}.chips i{font-style:normal;font-size:.75rem;padding:4px 10px;border-radius:99px;border:1px solid var(--bd);background:var(--card);color:var(--b)}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.about .card p{color:var(--tx)}
+.sk{margin-bottom:14px}.sk div{display:flex;justify-content:space-between;font-size:.9rem;margin-bottom:5px}
+.bar{height:8px;border-radius:9px;background:var(--bd);overflow:hidden}.bar i{display:block;height:100%;width:0;border-radius:9px;background:linear-gradient(90deg,var(--a),var(--b),var(--c));transition:width 1.4s cubic-bezier(.2,.8,.2,1)}
+.tl{border-left:2px solid var(--bd);padding-left:22px;display:grid;gap:14px}
+.tl div{padding:16px 20px;position:relative}.tl div::before{content:"";position:absolute;left:-30px;top:22px;width:14px;height:14px;border-radius:50%;background:var(--b);box-shadow:0 0 14px var(--b)}
+.tl b{color:var(--b)}.tl span{color:var(--mu);font-size:.9rem;display:block}
+.ct{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.ct a{display:block;text-decoration:none;color:var(--tx);padding:22px;border-radius:18px;background:var(--card);border:1px solid var(--bd);transition:.3s;word-break:break-word}
+.ct a:hover{border-color:var(--c);transform:translateY(-5px)}.ct small{color:var(--mu);display:block}
+footer{text-align:center;padding:40px 5vw 50px;color:var(--mu);font-size:.85rem}
+.rv{opacity:0;transform:translateY(34px);transition:1s cubic-bezier(.2,.8,.2,1)}.rv.on{opacity:1;transform:none}
+@media(max-width:800px){.hero,.about{grid-template-columns:1fr}.avatar{order:-1;font-size:4rem}}
+#ld{position:fixed;inset:0;z-index:100;display:grid;place-items:center;background:var(--bg);transition:opacity .7s,visibility .7s,transform .7s}
+#ld.done{opacity:0;visibility:hidden;transform:scale(1.06)}
+.ldi{text-align:center;width:min(360px,80vw)}
+#pc{font-size:clamp(4rem,16vw,7rem);font-weight:700;line-height:1}
+.lbar{height:6px;border-radius:9px;background:var(--bd);overflow:hidden;margin:18px 0 12px}
+.lbar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--a),var(--b),var(--c));box-shadow:0 0 16px var(--b)}
+body.lock{overflow:hidden}
+@media(max-width:800px){
+.bg,.cl{display:grid}
+nav .l{position:fixed;inset:0;margin:0;flex-direction:column;justify-content:center;gap:28px;background:color-mix(in srgb,var(--bg) 95%,transparent);backdrop-filter:blur(18px);transform:translateX(100%);visibility:hidden;transition:transform .45s cubic-bezier(.2,.8,.2,1),visibility .45s;z-index:30}
+nav .l.open{transform:none;visibility:visible}
+nav .l a{font-size:1.7rem;color:var(--tx)}
+.cl{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));right:5vw}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body class="lock">
+<div id="ld"><div class="ldi"><div class="logo" style="font-size:1.4rem">&lt;CM/&gt;</div><div><span id="pc" class="g">0</span><span class="g" style="font-size:2rem">%</span></div><div class="lbar"><i id="bf"></i></div><small style="color:var(--mu)">Chargement du portfolio…</small></div></div>
+<noscript><style>#ld{display:none}body.lock{overflow:auto}</style></noscript>
+<div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+<nav><span class="logo">&lt;CM/&gt;</span>
+<div class="l" id="menu"><button id="cl" class="cl" aria-label="Fermer le menu">✕</button><a href="#about">À propos</a><a href="#projets">Projets</a><a href="#skills">Compétences</a><a href="#parcours">Parcours</a><a href="#contact">Contact</a></div><div class="r"><button id="th" aria-label="Thème">🌗</button><button id="bg" class="bg" aria-label="Ouvrir le menu">☰</button></div></nav>
+<main>
+<section class="hero" id="top">
+<div>
+<span class="tag">🟢 Disponible pour un stage</span>
+<h1>Salut, je suis <span class="g">Cyrille Mondésir</span></h1>
+<div class="type">Je suis <b id="tw"></b><span class="cur"></span></div>
+<p style="color:var(--mu);max-width:560px">Étudiant à Pigier Yamoussoukro, je transforme des idées en applications web et logiciels utiles : gestion hôtelière, élevage, restauration, péage, streaming et droit.</p>
+<div class="btns"><a class="btn" href="#projets">Voir mes projets 🚀</a><a class="btn o" href="#contact">Me contacter</a></div>
+</div>
+<div class="avatar"><span><img src="assets/photo.jpg" alt="Cyrille Mondésir"></span></div>
+</section>
+
+<section class="rv"><div class="stats">
+<div class="st"><b data-n="7">0</b><small>Projets majeurs</small></div>
+<div class="st"><b data-n="8">0</b><small>Langages & outils</small></div>
+<div class="st"><b data-n="2">0</b><small>Cursus en cours</small></div>
+<div class="st"><b data-n="100" data-s="%">0</b><small>Motivation</small></div>
+</div></section>
+
+<section id="about" class="rv">
+<h2>À <em>propos</em></h2>
+<div class="about">
+<div class="card"><p>Je m'appelle <b>Gbaklo Aude Cyrille Mondésir</b>, ivoirien, et je réside à <b>Yamoussoukro</b> (Côte d'Ivoire). Passionné d'informatique, je suis admissible au <b>BTS Informatique Développeur d'applications</b> et en <b>Licence Réseaux & Génie Logiciel</b> à Pigier Yamoussoukro.</p><p>Je conçois des sites et logiciels complets, du front-end animé à la base de données, et j'utilise l'IA générative (Claude) pour accélérer mon travail. Je recherche actuellement un <b>stage</b> en développement web & logiciel.</p></div>
+<div class="card"><h3>🎓 Ce que je sais faire</h3><div class="chips"><i>Sites web dynamiques</i><i>Applications de gestion</i><i>Bases de données MySQL / Access</i><i>Applications desktop VB.NET</i><i>Design responsive</i><i>Géolocalisation & cartes</i><i>Envoi d'e-mails (PHPMailer)</i><i>Espaces administrateur</i><i>Excel certifié</i></div></div>
+</div></section>
+
+<section id="projets" class="rv">
+<h2>Mes <em>projets</em></h2>
+<div class="grid">
+<div class="card"><div class="ic">🏨</div><h3>MOHOTEL</h3><p>Application de gestion hôtelière : tableaux de bord, grille des chambres, réservations et calcul de distance par GPS en temps réel (Plateau, Abidjan). Versions HTML monofichier et PHP/MySQL (MVC).</p><div class="chips"><i>HTML/JS</i><i>Leaflet.js</i><i>PHP</i><i>MySQL</i><i>WampServer</i></div></div>
+<div class="card"><div class="ic">🐐</div><h3>MONELE</h3><p>Application pour éleveurs : suivi du cheptel (naissances, pertes, gestantes), alarmes de mise bas et d'alimentation, stocks médicaments et nourriture, bilan mensuel profits/pertes, GPS, export PDF, interface responsive.</p><div class="chips"><i>PHP</i><i>MySQL</i><i>phpMyAdmin</i><i>Responsive</i><i>AwardSpace</i></div><a class="lk" href="http://monele.atwebpages.com/" target="_blank" rel="noopener">Voir le projet ↗</a></div>
+<div class="card"><div class="ic">🍲</div><h3>TIEHI FOOD</h3><p>Site de restaurant avec plats ivoiriens, commande par e-mail, abonnements, page INFO avec carte GPS, messagerie et tableau de bord administrateur sécurisé.</p><div class="chips"><i>PHP</i><i>MySQL</i><i>PHPMailer</i><i>Sessions</i><i>CSS</i></div></div>
+<div class="card"><div class="ic">🚧</div><h3>Pont Péage</h3><p>Système de péage web et desktop : frontend PHP, base peage_db, logos SVG, et application VB.NET de guichet pour recherche de véhicule et enregistrement des paiements.</p><div class="chips"><i>PHP</i><i>MySQL</i><i>VB.NET</i><i>Access</i><i>SVG</i></div></div>
+<div class="card"><div class="ic">🎬</div><h3>CinéStream</h3><p>Plateforme de streaming façon Netflix, d'abord reliée à l'API TMDB, puis reconstruite avec des films du domaine public d'Archive.org pour une lecture réelle.</p><div class="chips"><i>JavaScript</i><i>API TMDB</i><i>Archive.org</i><i>UI</i></div></div>
+<div class="card"><div class="ic">⚖️</div><h3>Loi en Main</h3><p>« Toute la jurisprudence, à portée de main. » Plateforme mobile et web de jurisprudence (France, Côte d'Ivoire, OHADA) : recherche avancée, résumés, alertes et comparaison entre juridictions.</p><div class="chips"><i>Django / Node</i><i>React / Flutter</i><i>PostgreSQL</i><i>ElasticSearch</i></div></div>
+<div class="card"><div class="ic">📚</div><h3>Suivi des cours</h3><p>Site pour enregistrer des cours, structurer chapitres et sous-parties, cocher l'avancement et suivre la progression globale avec barre de progression, données en JSON.</p><div class="chips"><i>HTML</i><i>CSS</i><i>JavaScript</i><i>JSON</i></div></div>
+<div class="card"><div class="ic">🎮</div><h3>Créations & exercices</h3><p>Jeu de Ludo, animation du 1er avril, affiche animée « Green Tech & Digitalisation », formulaire d'inscription JS avec validation, gestion d'élèves en VB.NET (base Access).</p><div class="chips"><i>HTML/CSS</i><i>JavaScript</i><i>VB.NET</i><i>C</i><i>Pascal</i></div></div>
+</div></section>
+
+<section id="skills" class="rv">
+<h2>Mes <em>compétences</em></h2>
+<div class="about">
+<div class="card">
+<div class="sk"><div><span>HTML / CSS</span><span>90%</span></div><div class="bar"><i data-w="90"></i></div></div>
+<div class="sk"><div><span>JavaScript</span><span>80%</span></div><div class="bar"><i data-w="80"></i></div></div>
+<div class="sk"><div><span>PHP / MySQL</span><span>80%</span></div><div class="bar"><i data-w="80"></i></div></div>
+<div class="sk"><div><span>VB.NET</span><span>70%</span></div><div class="bar"><i data-w="70"></i></div></div>
+<div class="sk"><div><span>C / Pascal</span><span>65%</span></div><div class="bar"><i data-w="65"></i></div></div>
+</div>
+<div class="card"><h3>🛠️ Outils</h3><div class="chips"><i>Word</i><i>Excel (certifié)</i><i>WampServer</i><i>phpMyAdmin</i><i>IA générative (Claude)</i><i>Leaflet.js</i><i>PHPMailer</i></div><h3 style="margin-top:22px">🗣️ Langue</h3><div class="chips"><i>Français</i></div></div>
+</div></section>
+
+<section id="parcours" class="rv">
+<h2>Mon <em>parcours</em></h2>
+<div class="tl">
+<div><b>2025 – 2026</b><span>Pigier Yamoussoukro</span>BTS Informatique, Développeur d'applications (admissible)</div>
+<div><b>2024 – 2026</b><span>Pigier Yamoussoukro</span>Licence en Réseaux & Génie Logiciel</div>
+<div><b>2023 – 2024</b><span>Collège Pohesson de Kouibly</span>Baccalauréat série D</div>
+<div><b>2017 – 2018</b><span>Collège moderne Charles Koffi Diby, Bouaflé</span>BEPC</div>
+<div><b>2012 – 2013</b><span>École primaire Biaka Boda, Bouaflé</span>CEPE</div>
+</div></section>
+
+<section id="contact" class="rv">
+<h2>Travaillons <em>ensemble</em></h2>
+<div class="ct">
+<a href="mailto:cyrillemondesir28@gmail.com">✉️<small>E-mail</small>cyrillemondesir28@gmail.com</a>
+<a href="tel:+2250799079857">📞<small>Téléphone</small>+225 07 99 07 98 57</a>
+<a href="#top">📍<small>Localisation</small>Yamoussoukro, Côte d'Ivoire</a>
+</div></section>
+</main>
+<footer>© 2026 Cyrille Mondésir · Développeur web & logiciel · Fait avec ❤️ en Côte d'Ivoire</footer>
+<script>
+const w=["développeur web & logiciel","créateur d'applications","passionné de code","futur stagiaire engagé"];let i=0,j=0,d=0;const t=document.getElementById('tw');
+(function ty(){const s=w[i];j+=d?-1:1;t.textContent=s.slice(0,j);let p=d?35:75;if(!d&&j===s.length){d=1;p=1400}else if(d&&j===0){d=0;i=(i+1)%w.length;p=300}setTimeout(ty,p)})();
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(!x.isIntersecting)return;x.target.classList.add('on');
+x.target.querySelectorAll('[data-w]').forEach(b=>b.style.width=b.dataset.w+'%');
+x.target.querySelectorAll('[data-n]').forEach(c=>{const n=+c.dataset.n,s=c.dataset.s||'';let k=0;const f=setInterval(()=>{k+=Math.max(1,n/40);if(k>=n){k=n;clearInterval(f)}c.textContent=Math.round(k)+s},35)});io.unobserve(x.target)}),{threshold:.15});
+document.querySelectorAll('.rv').forEach(e=>io.observe(e));
+document.getElementById('th').onclick=()=>{const r=document.documentElement,l=matchMedia('(prefers-color-scheme:light)').matches;const cur=r.dataset.theme||(l?'light':'dark');r.dataset.theme=cur==='dark'?'light':'dark'};
+document.querySelectorAll('.card').forEach(c=>c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect();c.style.setProperty('--x',e.clientX-r.left)}));
+
+const ld=document.getElementById('ld'),pc=document.getElementById('pc'),bf=document.getElementById('bf');let p=0,ok=document.readyState==='complete';addEventListener('load',()=>ok=true);
+function fin(){ld.classList.add('done');document.body.classList.remove('lock')}
+const t0=Date.now(),D=5000;
+const iv=setInterval(()=>{p=Math.min(100,(Date.now()-t0)/D*100);if(!ok&&p>96)p=96;if(p>=100){clearInterval(iv);setTimeout(fin,350)}pc.textContent=Math.floor(p);bf.style.width=p+'%'},40);
+setTimeout(fin,9000);
+const mn=document.getElementById('menu');
+function om(){mn.classList.add('open');document.body.classList.add('lock')}
+function cm(){mn.classList.remove('open');document.body.classList.remove('lock')}
+document.getElementById('bg').onclick=om;document.getElementById('cl').onclick=cm;
+mn.querySelectorAll('a').forEach(a=>a.addEventListener('click',cm));
+addEventListener('keydown',e=>{if(e.key==='Escape')cm()});
+addEventListener('resize',()=>{if(innerWidth>800)cm()});
+</script>
+</body>
+</html>
