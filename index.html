@@ -49,6 +49,7 @@ h2{font-size:clamp(1.8rem,4vw,2.8rem);margin:0 0 28px}h2 em{font-style:normal;co
 .card:hover{transform:translateY(-8px);border-color:var(--a);box-shadow:0 20px 50px -20px var(--a)}
 .card::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,var(--a),var(--b),var(--c))}
 .ic{font-size:2.2rem}.card h3{margin:10px 0 6px;font-size:1.3rem}.card p{color:var(--mu);margin:0 0 14px;font-size:.95rem}
+.lk{display:inline-block;margin-top:16px;padding:9px 18px;border-radius:12px;font-size:.88rem;font-weight:700;text-decoration:none;color:#fff;background:linear-gradient(120deg,var(--a),var(--c));transition:.3s}.lk:hover{transform:translateY(-2px) scale(1.04);box-shadow:0 8px 24px -8px var(--a)}
 .chips{display:flex;flex-wrap:wrap;gap:7px}.chips i{font-style:normal;font-size:.75rem;padding:4px 10px;border-radius:99px;border:1px solid var(--bd);background:var(--card);color:var(--b)}
 .about{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .about .card p{color:var(--tx)}
@@ -100,7 +101,7 @@ footer{text-align:center;padding:40px 5vw 50px;color:var(--mu);font-size:.85rem}
 <h2>Mes <em>projets</em></h2>
 <div class="grid">
 <div class="card"><div class="ic">🏨</div><h3>MOHOTEL</h3><p>Application de gestion hôtelière : tableaux de bord, grille des chambres, réservations et calcul de distance par GPS en temps réel (Plateau, Abidjan). Versions HTML monofichier et PHP/MySQL (MVC).</p><div class="chips"><i>HTML/JS</i><i>Leaflet.js</i><i>PHP</i><i>MySQL</i><i>WampServer</i></div></div>
-<div class="card"><div class="ic">🐐</div><h3>MONELE</h3><p>Application pour éleveurs : suivi du cheptel (naissances, pertes, gestantes), alarmes de mise bas et d'alimentation, stocks médicaments et nourriture, bilan mensuel profits/pertes, GPS, export PDF, interface responsive.</p><div class="chips"><i>PHP</i><i>MySQL</i><i>phpMyAdmin</i><i>Responsive</i><i>AwardSpace</i></div></div>
+<div class="card"><div class="ic">🐐</div><h3>MONELE</h3><p>Application pour éleveurs : suivi du cheptel (naissances, pertes, gestantes), alarmes de mise bas et d'alimentation, stocks médicaments et nourriture, bilan mensuel profits/pertes, GPS, export PDF, interface responsive.</p><div class="chips"><i>PHP</i><i>MySQL</i><i>phpMyAdmin</i><i>Responsive</i><i>AwardSpace</i></div><a class="lk" href="http://monele.atwebpages.com/" target="_blank" rel="noopener">Voir le projet ↗</a></div>
 <div class="card"><div class="ic">🍲</div><h3>TIEHI FOOD</h3><p>Site de restaurant avec plats ivoiriens, commande par e-mail, abonnements, page INFO avec carte GPS, messagerie et tableau de bord administrateur sécurisé.</p><div class="chips"><i>PHP</i><i>MySQL</i><i>PHPMailer</i><i>Sessions</i><i>CSS</i></div></div>
 <div class="card"><div class="ic">🚧</div><h3>Pont Péage</h3><p>Système de péage web et desktop : frontend PHP, base peage_db, logos SVG, et application VB.NET de guichet pour recherche de véhicule et enregistrement des paiements.</p><div class="chips"><i>PHP</i><i>MySQL</i><i>VB.NET</i><i>Access</i><i>SVG</i></div></div>
 <div class="card"><div class="ic">🎬</div><h3>CinéStream</h3><p>Plateforme de streaming façon Netflix, d'abord reliée à l'API TMDB, puis reconstruite avec des films du domaine public d'Archive.org pour une lecture réelle.</p><div class="chips"><i>JavaScript</i><i>API TMDB</i><i>Archive.org</i><i>UI</i></div></div>
