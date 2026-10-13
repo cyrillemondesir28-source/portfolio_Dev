@@ -4,15 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Cyrille Mondésir — Développeur Web & Logiciel</title>
+<meta name="theme-color" content="#070914">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#070914;--bg2:#0e1224;--card:rgba(255,255,255,.05);--bd:rgba(255,255,255,.12);--tx:#eef1ff;--mu:#9aa3c7;--a:#7c5cff;--b:#00e0ff;--c:#ff4ecd;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root{--bg:#070914;--bg2:#0e1224;--card:rgba(255,255,255,.05);--bd:rgba(255,255,255,.12);--tx:#eef1ff;--mu:#9aa3c7;--a:#7c5cff;--b:#00e0ff;--c:#ff4ecd;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);padding-left:env(safe-area-inset-left,0px);padding-right:env(safe-area-inset-right,0px)}
 @media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f5f6ff;--bg2:#e9ebff;--card:rgba(255,255,255,.75);--bd:rgba(40,40,100,.15);--tx:#14163a;--mu:#555b82}}
 :root[data-theme="light"]{--bg:#f5f6ff;--bg2:#e9ebff;--card:rgba(255,255,255,.75);--bd:rgba(40,40,100,.15);--tx:#14163a;--mu:#555b82}
 :root[data-theme="dark"]{--bg:#070914;--bg2:#0e1224;--card:rgba(255,255,255,.05);--bd:rgba(255,255,255,.12);--tx:#eef1ff;--mu:#9aa3c7}
-html{scroll-behavior:smooth;scroll-padding-top:70px}
+html{scroll-behavior:smooth;scroll-padding-top:70px;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--tx);font-family:'Space Grotesk',system-ui,sans-serif;overflow-x:hidden;line-height:1.6}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:'Space Grotesk',system-ui,sans-serif;overflow-x:hidden;line-height:1.6;-webkit-tap-highlight-color:transparent}
 .blob{position:fixed;width:46vmax;height:46vmax;border-radius:50%;filter:blur(90px);opacity:.35;z-index:0;animation:fl 18s ease-in-out infinite alternate;pointer-events:none}
 .b1{background:var(--a);top:-15vmax;left:-10vmax}.b2{background:var(--b);bottom:-18vmax;right:-12vmax;animation-delay:-6s}.b3{background:var(--c);top:40%;left:50%;width:28vmax;height:28vmax;opacity:.18;animation-delay:-3s}
 @keyframes fl{to{transform:translate(8vmax,6vmax) scale(1.15)}}
@@ -26,7 +29,7 @@ nav .l{display:flex;gap:22px;align-items:center;margin-left:auto}
 nav a{color:var(--mu);text-decoration:none;font-size:.9rem;white-space:nowrap}nav a:hover{color:var(--tx)}
 #th{background:var(--card);border:1px solid var(--bd);color:var(--tx);border-radius:99px;padding:6px 12px;cursor:pointer}
 section{padding:90px 5vw 40px;max-width:1150px;margin:auto}
-.hero{min-height:88vh;display:grid;grid-template-columns:1.3fr .8fr;gap:40px;align-items:center}
+.hero{min-height:88vh;min-height:88svh;display:grid;grid-template-columns:1.3fr .8fr;gap:40px;align-items:center}
 .tag{display:inline-block;padding:6px 14px;border:1px solid var(--bd);border-radius:99px;background:var(--card);font-size:.85rem;color:var(--b)}
 h1{font-size:clamp(2.4rem,7vw,5rem);line-height:1.05;margin:18px 0}
 .g{background:linear-gradient(90deg,var(--a),var(--b),var(--c),var(--a));background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sh 6s linear infinite}
@@ -36,23 +39,23 @@ h1{font-size:clamp(2.4rem,7vw,5rem);line-height:1.05;margin:18px 0}
 @keyframes bl{50%{opacity:0}}
 .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
 .btn{padding:13px 24px;border-radius:14px;text-decoration:none;font-weight:700;color:#fff;background:linear-gradient(120deg,var(--a),var(--c));box-shadow:0 10px 30px -8px var(--a);transition:.3s}
-.btn:hover{transform:translateY(-3px) scale(1.03)}
+@media(hover:hover){.btn:hover{transform:translateY(-3px) scale(1.03)}}
 .btn.o{background:var(--card);border:1px solid var(--bd);color:var(--tx);box-shadow:none}
 .avatar{position:relative;width:min(320px,70vw);aspect-ratio:1;margin:auto;display:grid;place-items:center;font-size:5.5rem;font-weight:700;border-radius:50%;background:conic-gradient(from 0deg,var(--a),var(--b),var(--c),var(--a));animation:sp 10s linear infinite}
 .avatar span{display:grid;place-items:center;width:92%;height:92%;border-radius:50%;background:var(--bg2);animation:sp 10s linear infinite reverse}
 @keyframes sp{to{transform:rotate(360deg)}}
 .avatar img{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block}
 .avatar span{overflow:hidden}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin-top:20px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:14px;margin-top:20px}
 .st,.card,.tl div{background:var(--card);border:1px solid var(--bd);border-radius:20px;backdrop-filter:blur(10px)}
 .st{padding:20px;text-align:center}.st b{display:block;font-size:2.2rem;background:linear-gradient(90deg,var(--b),var(--c));-webkit-background-clip:text;background-clip:text;color:transparent}.st small{color:var(--mu)}
 h2{font-size:clamp(1.8rem,4vw,2.8rem);margin:0 0 28px}h2 em{font-style:normal;color:var(--b)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(290px,100%),1fr));gap:20px}
 .card{padding:26px;transition:transform .25s,border-color .25s,box-shadow .25s;position:relative;overflow:hidden}
-.card:hover{transform:translateY(-8px);border-color:var(--a);box-shadow:0 20px 50px -20px var(--a)}
+@media(hover:hover){.card:hover{transform:translateY(-8px);border-color:var(--a);box-shadow:0 20px 50px -20px var(--a)}}
 .card::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,var(--a),var(--b),var(--c))}
 .ic{font-size:2.2rem}.card h3{margin:10px 0 6px;font-size:1.3rem}.card p{color:var(--mu);margin:0 0 14px;font-size:.95rem}
-.lk{display:inline-block;margin-top:16px;padding:9px 18px;border-radius:12px;font-size:.88rem;font-weight:700;text-decoration:none;color:#fff;background:linear-gradient(120deg,var(--a),var(--c));transition:.3s}.lk:hover{transform:translateY(-2px) scale(1.04);box-shadow:0 8px 24px -8px var(--a)}
+.lk{display:inline-block;margin-top:16px;padding:9px 18px;border-radius:12px;font-size:.88rem;font-weight:700;text-decoration:none;color:#fff;background:linear-gradient(120deg,var(--a),var(--c));transition:.3s}@media(hover:hover){.lk:hover{transform:translateY(-2px) scale(1.04);box-shadow:0 8px 24px -8px var(--a)}}
 .chips{display:flex;flex-wrap:wrap;gap:7px}.chips i{font-style:normal;font-size:.75rem;padding:4px 10px;border-radius:99px;border:1px solid var(--bd);background:var(--card);color:var(--b)}
 .about{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .about .card p{color:var(--tx)}
@@ -61,9 +64,9 @@ h2{font-size:clamp(1.8rem,4vw,2.8rem);margin:0 0 28px}h2 em{font-style:normal;co
 .tl{border-left:2px solid var(--bd);padding-left:22px;display:grid;gap:14px}
 .tl div{padding:16px 20px;position:relative}.tl div::before{content:"";position:absolute;left:-30px;top:22px;width:14px;height:14px;border-radius:50%;background:var(--b);box-shadow:0 0 14px var(--b)}
 .tl b{color:var(--b)}.tl span{color:var(--mu);font-size:.9rem;display:block}
-.ct{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.ct{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:16px}
 .ct a{display:block;text-decoration:none;color:var(--tx);padding:22px;border-radius:18px;background:var(--card);border:1px solid var(--bd);transition:.3s;word-break:break-word}
-.ct a:hover{border-color:var(--c);transform:translateY(-5px)}.ct small{color:var(--mu);display:block}
+@media(hover:hover){.ct a:hover{border-color:var(--c);transform:translateY(-5px)}}.ct small{color:var(--mu);display:block}
 footer{text-align:center;padding:40px 5vw 50px;color:var(--mu);font-size:.85rem}
 .rv{opacity:0;transform:translateY(34px);transition:1s cubic-bezier(.2,.8,.2,1)}.rv.on{opacity:1;transform:none}
 @media(max-width:800px){.hero,.about{grid-template-columns:1fr}.avatar{order:-1;font-size:4rem}}
@@ -76,17 +79,28 @@ footer{text-align:center;padding:40px 5vw 50px;color:var(--mu);font-size:.85rem}
 body.lock{overflow:hidden}
 @media(max-width:800px){
 .bg,.cl{display:grid}
-nav .l{position:fixed;inset:0;margin:0;flex-direction:column;justify-content:center;gap:28px;background:color-mix(in srgb,var(--bg) 95%,transparent);backdrop-filter:blur(18px);transform:translateX(100%);visibility:hidden;transition:transform .45s cubic-bezier(.2,.8,.2,1),visibility .45s;z-index:30}
+nav .l{position:fixed;inset:0;margin:0;flex-direction:column;justify-content:center;gap:28px;background:var(--bg);overscroll-behavior:contain;transform:translateX(100%);visibility:hidden;transition:transform .45s cubic-bezier(.2,.8,.2,1),visibility .45s;z-index:30}
 nav .l.open{transform:none;visibility:visible}
 nav .l a{font-size:1.7rem;color:var(--tx)}
 .cl{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));right:5vw}
 }
+@media(max-width:800px){
+.blob{display:none}
+body{background:radial-gradient(70vmax 70vmax at 0 0,rgba(124,92,255,.3),transparent 60%),radial-gradient(70vmax 70vmax at 100% 100%,rgba(0,224,255,.22),transparent 60%),var(--bg)}
+.st,.card,.tl div{backdrop-filter:none}
+nav::before{backdrop-filter:none;background:color-mix(in srgb,var(--bg) 94%,transparent)}
+.g{animation:none}
+section{padding:70px 5vw 30px}
+.card{padding:22px}
+}
+.ct a,.card p,.tl div{overflow-wrap:anywhere}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
 </style>
 </head>
 <body class="lock">
 <div id="ld"><div class="ldi"><div class="logo" style="font-size:1.4rem">&lt;CM/&gt;</div><div><span id="pc" class="g">0</span><span class="g" style="font-size:2rem">%</span></div><div class="lbar"><i id="bf"></i></div><small style="color:var(--mu)">Chargement du portfolio…</small></div></div>
-<noscript><style>#ld{display:none}body.lock{overflow:auto}</style></noscript>
+<noscript><style>#ld{display:none}body.lock{overflow:auto}.rv{opacity:1;transform:none}</style></noscript>
+<script>setTimeout(function(){var l=document.getElementById("ld");if(l){l.classList.add("done");document.body.classList.remove("lock")}},12000)</script>
 <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
 <nav><span class="logo">&lt;CM/&gt;</span>
 <div class="l" id="menu"><button id="cl" class="cl" aria-label="Fermer le menu">✕</button><a href="#about">À propos</a><a href="#projets">Projets</a><a href="#skills">Compétences</a><a href="#parcours">Parcours</a><a href="#contact">Contact</a></div><div class="r"><button id="th" aria-label="Thème">🌗</button><button id="bg" class="bg" aria-label="Ouvrir le menu">☰</button></div></nav>
@@ -99,7 +113,7 @@ nav .l a{font-size:1.7rem;color:var(--tx)}
 <p style="color:var(--mu);max-width:560px">Étudiant à Pigier Yamoussoukro, je transforme des idées en applications web et logiciels utiles : gestion hôtelière, élevage, restauration, péage, streaming et droit.</p>
 <div class="btns"><a class="btn" href="#projets">Voir mes projets 🚀</a><a class="btn o" href="#contact">Me contacter</a></div>
 </div>
-<div class="avatar"><span><img src="assets/photo.jpg" alt="Cyrille Mondésir"></span></div>
+<div class="avatar"><span><img src="assets/photo.jpg" alt="Cyrille Mondésir" width="520" height="520" decoding="async" fetchpriority="high"></span></div>
 </section>
 
 <section class="rv"><div class="stats">
@@ -164,9 +178,9 @@ nav .l a{font-size:1.7rem;color:var(--tx)}
 <script>
 const w=["développeur web & logiciel","créateur d'applications","passionné de code","futur stagiaire engagé"];let i=0,j=0,d=0;const t=document.getElementById('tw');
 (function ty(){const s=w[i];j+=d?-1:1;t.textContent=s.slice(0,j);let p=d?35:75;if(!d&&j===s.length){d=1;p=1400}else if(d&&j===0){d=0;i=(i+1)%w.length;p=300}setTimeout(ty,p)})();
-const io=new IntersectionObserver(e=>e.forEach(x=>{if(!x.isIntersecting)return;x.target.classList.add('on');
+const io=window.IntersectionObserver?new IntersectionObserver(e=>e.forEach(x=>{if(!x.isIntersecting)return;x.target.classList.add('on');
 x.target.querySelectorAll('[data-w]').forEach(b=>b.style.width=b.dataset.w+'%');
-x.target.querySelectorAll('[data-n]').forEach(c=>{const n=+c.dataset.n,s=c.dataset.s||'';let k=0;const f=setInterval(()=>{k+=Math.max(1,n/40);if(k>=n){k=n;clearInterval(f)}c.textContent=Math.round(k)+s},35)});io.unobserve(x.target)}),{threshold:.15});
+x.target.querySelectorAll('[data-n]').forEach(c=>{const n=+c.dataset.n,s=c.dataset.s||'';let k=0;const f=setInterval(()=>{k+=Math.max(1,n/40);if(k>=n){k=n;clearInterval(f)}c.textContent=Math.round(k)+s},35)});io.unobserve(x.target)}),{threshold:.15}):{observe(e){e.classList.add('on');e.querySelectorAll('[data-w]').forEach(b=>b.style.width=b.dataset.w+'%');e.querySelectorAll('[data-n]').forEach(c=>c.textContent=c.dataset.n+(c.dataset.s||''))}};
 document.querySelectorAll('.rv').forEach(e=>io.observe(e));
 document.getElementById('th').onclick=()=>{const r=document.documentElement,l=matchMedia('(prefers-color-scheme:light)').matches;const cur=r.dataset.theme||(l?'light':'dark');r.dataset.theme=cur==='dark'?'light':'dark'};
 document.querySelectorAll('.card').forEach(c=>c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect();c.style.setProperty('--x',e.clientX-r.left)}));
