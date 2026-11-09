@@ -5,6 +5,8 @@ Portfolio personnel de **Gbaklo Aude Cyrille Mondésir**, développeur web & log
 ## Contenu
 - `index.html` : la page du portfolio (HTML, CSS et JavaScript dans un seul fichier)
 - `assets/photo.jpg` : photo de profil
+- `assets/logo.svg` / `assets/logo.png` : logo </CM> (réutilisable : CV, réseaux sociaux)
+- `assets/icon.svg` / `assets/icon.png` : version carrée du logo (icône d'onglet)
 
 ## Mettre en ligne avec GitHub Pages
 1. Créer un dépôt sur GitHub (ex. `portfolio`) et y envoyer tous ces fichiers.

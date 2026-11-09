@@ -6,6 +6,8 @@
 <meta name="theme-color" content="#0a1a14">
 <title>Cyrille Mondésir — Développeur web &amp; logiciel</title>
 <meta name="description" content="Portfolio de Cyrille Mondésir, développeur web et logiciel à Yamoussoukro, Côte d'Ivoire. Projets, compétences, parcours et contact.">
+<link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+<link rel="apple-touch-icon" href="assets/icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,800&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
@@ -41,6 +43,14 @@ body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opa
 .lb{height:6px;border-radius:9px;background:var(--bd);overflow:hidden;margin:16px 0 12px}.lb i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--or),var(--gr))}
 [data-t=light] .pn:nth-child(1){border-color:#1f4fff}[data-t=light] .pn:nth-child(2){border-color:#0b1b3f}[data-t=light] .pn:nth-child(3){border-color:#ffc400}
 #ld.done .cn{opacity:0}#ld.done .pn{transform:translateY(-102%)}#ld.done{visibility:hidden;transition:visibility 0s 1.3s}
+/* logo */
+.lgo{display:block;overflow:visible}
+.lg .lgo{height:40px;width:auto;transition:transform .4s}.lg:hover .lgo{transform:scale(1.07)}
+.ldl{width:clamp(170px,50vw,240px);height:auto;margin:0 auto 22px}
+.ldl .lt{stroke-dasharray:1;animation:dw .9s cubic-bezier(.6,0,.2,1) both}
+.ldl .b{animation-delay:.2s}.ldl .c{animation-delay:.4s}.ldl .d{animation-delay:.65s}.ldl .e{animation-delay:.9s}
+@keyframes dw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+footer .lgo{height:26px;width:auto;margin:0 auto 14px}
 /* navigation */
 .nv{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;gap:14px;padding:calc(14px + env(safe-area-inset-top,0px)) 5vw 14px;transition:transform .4s,background .3s}
 .nv.sc{background:color-mix(in srgb,var(--bg) 96%,transparent);border-bottom:1px solid var(--bd)}.nv.hd{transform:translateY(-100%)}
@@ -125,17 +135,17 @@ body{background:radial-gradient(70vmax 70vmax at 0 0,color-mix(in srgb,var(--or)
 </style>
 </head>
 <body class="lk">
-<div id="ld"><i class="pn"></i><i class="pn"></i><i class="pn"></i><div class="cn"><div class="dp"><span id="pc" class="gt">0</span><span class="gt" style="font-size:2.4rem">%</span></div><div class="lb"><i id="bf"></i></div><small style="color:var(--mu)">Chargement du portfolio</small></div></div>
+<div id="ld"><i class="pn"></i><i class="pn"></i><i class="pn"></i><div class="cn"><svg class="lgo ldl" viewBox="0 0 140 64" role="img" aria-label="Logo de Cyrille Mondésir"><g fill="none" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"><path class="lt" pathLength="1" style="stroke:var(--or)" d="M22 20L8 32L22 44"/><path class="lt b" pathLength="1" style="stroke:var(--or)" d="M40 18L30 46"/><path class="lt c" pathLength="1" style="stroke:var(--fg)" d="M72.7 23A14 14 0 1 0 72.7 41"/><path class="lt d" pathLength="1" style="stroke:var(--fg)" d="M80 46V18L92 34L104 18V46"/><path class="lt e" pathLength="1" style="stroke:var(--gr)" d="M118 20L132 32L118 44"/></g></svg><div class="dp"><span id="pc" class="gt">0</span><span class="gt" style="font-size:2.4rem">%</span></div><div class="lb"><i id="bf"></i></div><small style="color:var(--mu)">Chargement du portfolio</small></div></div>
 <noscript><style>#ld{display:none}body.lk{overflow:auto}.rv,.l{opacity:1;transform:none}</style></noscript>
 <script>setTimeout(function(){var l=document.getElementById("ld");if(l){l.className="done";document.body.className=""}},12000)</script>
 <div class="orb o1"></div><div class="orb o2"></div><div id="pg"></div><div id="cdot"></div><div id="crg"></div>
-<header class="nv" id="nv"><a class="lg" href="#top" aria-label="Accueil">CM<b>.</b></a>
+<header class="nv" id="nv"><a class="lg" href="#top" aria-label="Accueil"><svg class="lgo " viewBox="0 0 140 64" role="img" aria-label="Logo de Cyrille Mondésir"><g fill="none" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"><path class="lt" pathLength="1" style="stroke:var(--or)" d="M22 20L8 32L22 44"/><path class="lt b" pathLength="1" style="stroke:var(--or)" d="M40 18L30 46"/><path class="lt c" pathLength="1" style="stroke:var(--fg)" d="M72.7 23A14 14 0 1 0 72.7 41"/><path class="lt d" pathLength="1" style="stroke:var(--fg)" d="M80 46V18L92 34L104 18V46"/><path class="lt e" pathLength="1" style="stroke:var(--gr)" d="M118 20L132 32L118 44"/></g></svg></a>
 <nav class="lk2"><a href="#about">À propos</a><a href="#projets">Projets</a><a href="#skills">Compétences</a><a href="#parcours">Parcours</a><a href="#contact">Contact</a></nav>
 <div class="rt"><button class="ib" id="th" aria-label="Changer de thème">◐</button><button class="ib bg" id="bg" aria-label="Ouvrir le menu">☰</button></div></header>
 <div id="mn"><button class="ib x" id="cl" aria-label="Fermer le menu">✕</button><a href="#about">À propos</a><a href="#projets">Projets</a><a href="#skills">Compétences</a><a href="#parcours">Parcours</a><a href="#contact">Contact</a></div>
 <main>
 <section class="sx hero" id="top" aria-label="Présentation">
-<div><span class="tag rv"><i></i>Disponible pour un stage</span>
+<div>
 <h1 aria-label="Cyrille Mondésir"><span class="ln" aria-hidden="true">Cyrille</span><span class="ln" aria-hidden="true">Mondésir</span></h1>
 <p class="rl rv" style="--d:.5s">Je suis <b id="tw"></b><i class="cur"></i></p>
 <p class="in rv" style="--d:.6s">Étudiant à Pigier Yamoussoukro, je transforme des idées en sites et logiciels utiles, du design animé jusqu'à la base de données.</p>
@@ -150,8 +160,7 @@ body{background:radial-gradient(70vmax 70vmax at 0 0,color-mix(in srgb,var(--or)
   métier: <span class="s">"Développeur web et logiciel"</span>,
   ville: <span class="s">"Yamoussoukro, Côte d'Ivoire"</span>,
   études: [<span class="s">"BTS Informatique"</span>, <span class="s">"Licence Réseaux &amp; GL"</span>],
-  stack: [<span class="s">"JS"</span>, <span class="s">"PHP"</span>, <span class="s">"MySQL"</span>, <span class="s">"VB.NET"</span>],
-  stage: <span class="k">true</span>
+  stack: [<span class="s">"JS"</span>, <span class="s">"PHP"</span>, <span class="s">"MySQL"</span>, <span class="s">"VB.NET"</span>]
 };<span class="cu2"></span></pre></div>
 <div class="st rv" style="--d:.15s"><div><b data-n="8">0</b><span>projets réalisés</span></div><div><b data-n="8">0</b><span>langages et outils</span></div><div><b data-n="2">0</b><span>cursus en cours</span></div><div><b data-n="100" data-s="%">0</b><span>motivation</span></div></div></div></section>
 <section class="sx" id="projets"><h2 class="rv">Ce que j'ai construit</h2><div id="gr"></div></section>
@@ -160,9 +169,9 @@ body{background:radial-gradient(70vmax 70vmax at 0 0,color-mix(in srgb,var(--or)
 <section class="sx" id="contact"><h2 class="rv gt">Parlons de votre projet</h2>
 <a class="em rv" href="mailto:cyrillemondesir28@gmail.com">cyrillemondesir28@gmail.com</a>
 <div class="cw rv"><a class="bt" href="tel:+2250799079857">Appeler +225 07 99 07 98 57</a><a class="bt o" href="mailto:cyrillemondesir28@gmail.com">Envoyer un e-mail</a></div>
-<p class="rv" style="color:var(--mu);margin-top:26px">Yamoussoukro, Côte d'Ivoire — en recherche de stage en développement web et logiciel.</p></section>
+<p class="rv" style="color:var(--mu);margin-top:26px">Yamoussoukro, Côte d'Ivoire — développement web et logiciel.</p></section>
 </main>
-<footer>© 2026 Cyrille Mondésir. Fait avec soin en Côte d'Ivoire.</footer>
+<footer><svg class="lgo " viewBox="0 0 140 64" role="img" aria-label="Logo de Cyrille Mondésir"><g fill="none" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"><path class="lt" pathLength="1" style="stroke:var(--or)" d="M22 20L8 32L22 44"/><path class="lt b" pathLength="1" style="stroke:var(--or)" d="M40 18L30 46"/><path class="lt c" pathLength="1" style="stroke:var(--fg)" d="M72.7 23A14 14 0 1 0 72.7 41"/><path class="lt d" pathLength="1" style="stroke:var(--fg)" d="M80 46V18L92 34L104 18V46"/><path class="lt e" pathLength="1" style="stroke:var(--gr)" d="M118 20L132 32L118 44"/></g></svg>© 2026 Cyrille Mondésir. Fait avec soin en Côte d'Ivoire.</footer>
 <script>
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],R=document.documentElement,B=document.body,fine=matchMedia('(pointer:fine)').matches;
 let th;try{th=localStorage.getItem('th')}catch(e){}th=th||(matchMedia('(prefers-color-scheme:light)').matches?'light':'dark');R.dataset.t=th;
@@ -182,7 +191,7 @@ const T=["HTML","CSS","JavaScript","PHP","MySQL","VB.NET","C","Pascal","Excel","
 $('#m1').innerHTML=mk(T);$('#m2').innerHTML=mk([...T].reverse());
 $$('.ln').forEach((e,k)=>{let n=k*7;e.innerHTML=[...e.textContent].map(c=>`<span class="l" style="--i:${n++}">${c}</span>`).join('')});
 const ab=$('#ab');ab.innerHTML=ab.textContent.trim().split(/\s+/).map(w=>`<span class="wd">${w}</span>`).join(' ');const wd=$$('.wd');
-const W=["développeur web et logiciel","créateur d'interfaces animées","passionné de code","futur stagiaire engagé"],tw=$('#tw');let wi=0,wj=0,wd2=0;
+const W=["développeur web et logiciel","créateur d'interfaces animées","passionné de code"],tw=$('#tw');let wi=0,wj=0,wd2=0;
 (function ty(){const s=W[wi];wj+=wd2?-1:1;tw.textContent=s.slice(0,wj);let p=wd2?35:80;if(!wd2&&wj===s.length){wd2=1;p=1400}else if(wd2&&!wj){wd2=0;wi=(wi+1)%W.length;p=300}setTimeout(ty,p)})();
 const cnt=c=>{const n=+c.dataset.n,s=c.dataset.s||'';let k=0;const f=setInterval(()=>{k+=Math.max(1,n/40);if(k>=n){k=n;clearInterval(f)}c.textContent=Math.round(k)+s},35)};
 function show(e){e.classList.add('on');e.querySelectorAll('[data-w]').forEach(b=>b.style.width=b.dataset.w+'%');e.querySelectorAll('[data-n]').forEach(cnt)}
